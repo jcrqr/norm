@@ -19,9 +19,11 @@ Generate TypeScript types from a database schema.
 
 Examples:
   norm -c mysql://user:password@localhost:3306/public
+  norm -c postgres://user:password@localhost:5432/public
 
 Supported databases:
   * MySQL
+  * PostgreSQL
 
 OPTIONS:
     -c, --conn       Database connection string
