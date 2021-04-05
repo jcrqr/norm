@@ -1,5 +1,5 @@
 compile:
-	@deno compile --unstable --lite --allow-write --allow-net main.ts
+	@deno compile --unstable --lite --allow-write --allow-net norm.ts
 
 ci:
 	@make fmt-check
