@@ -1,5 +1,6 @@
 import { Adapter, Column, Options, Schema, Table } from "./types.ts";
 import { adapter as mysqlAdapter } from "./adapters/mysql.ts";
+import { adapter as psqlAdapter } from "./adapters/psql.ts";
 
 export const defaultOptions: Options = {
   camelCase: true,
@@ -25,6 +26,10 @@ function adapterFromConnString(connStr: string): Adapter<unknown> {
 
   if (protocol === "mysql:") {
     return mysqlAdapter;
+  }
+
+  if (protocol === "postgres:") {
+    return psqlAdapter;
   }
 
   throw new Error(`No adapter for protocol: ${protocol}`);

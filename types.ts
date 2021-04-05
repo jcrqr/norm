@@ -27,7 +27,7 @@ export type Column = {
   description?: string;
 };
 
-export type ColumnType = "string" | "number" | "unknown" | "Date";
+export type ColumnType = "string" | "number" | "boolean" | "unknown" | "Date";
 
 export type Schema = {
   name: string;
