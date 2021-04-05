@@ -44,7 +44,7 @@ function transformTable(options: Options) {
     const tblName = pascalCase(table.name);
     const columns = table.columns.map(transformColumn(options)).join("\n");
 
-    return [`type ${tblName} = {`, columns, "}"].flat().join("\n");
+    return [`export type ${tblName} = {`, columns, "}"].flat().join("\n");
   };
 }
 
